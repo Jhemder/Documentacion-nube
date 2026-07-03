@@ -1,0 +1,2898 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación del proyecto UPeU Events">
+      
+      
+        <meta name="author" content="Kevin Jherson Abarca">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="..">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Project Charter - UPeU Events Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#project-charter-upeu-events" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="UPeU Events Documentation" class="md-header__button md-logo" aria-label="UPeU Events Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UPeU Events Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Project Charter
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Project Charter
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../informacion-general/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Información General
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../caso-negocio/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Caso de Negocio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../objetivos/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Objetivos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../equipo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Equipo del Proyecto
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../arquitectura/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Requerimientos Arquitecturales
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../historias-usuario/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Historias de Usuario
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../calidad-iso25010/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Evaluación ISO/IEC 25010
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ciclo-vida/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ciclo de Vida
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gestion-proyecto/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Gestión del Proyecto
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../github/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Trabajo Colaborativo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../calidad-software/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Calidad del Software
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../mejoras/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Mejoras
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../conclusiones/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Conclusiones
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../anexos/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Anexos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../versiones/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Registro de Versiones
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UPeU Events Documentation" class="md-nav__button md-logo" aria-label="UPeU Events Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    UPeU Events Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Charter
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Charter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📑 Tabla de Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-informacion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Información General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-caso-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Caso de Negocio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Caso de Negocio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcionalidades-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionalidades principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelamiento-del-proceso-bpmn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelamiento del proceso (BPMN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Objetivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Objetivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-especificos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos específicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-equipo-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Equipo del Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Equipo del Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perfiles-del-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perfiles del equipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-requerimientos-arquitecturales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Requerimientos Arquitecturales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-historias-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Historias de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-evaluacion-de-calidad-isoiec-25010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Evaluación de Calidad (ISO/IEC 25010)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Evaluación de Calidad (ISO/IEC 25010)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-mantenibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Mantenibilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-confiabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Confiabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Seguridad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accion-correctiva-isoiec-12207" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acción correctiva (ISO/IEC 12207)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ciclo-de-vida-del-software-ntp-isoiec-12207" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Ciclo de Vida del Software (NTP-ISO/IEC 12207)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Ciclo de Vida del Software (NTP-ISO/IEC 12207)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proceso-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso principal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesos-de-apoyo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procesos de apoyo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-organizacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso organizacional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-del-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas del proceso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-gestion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Gestión del Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Gestión del Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-metodologia-scrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Metodología Scrum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-aplicacion-de-cmmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Aplicación de CMMI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.2 Aplicación de CMMI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-solution-ts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Solution (TS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-ver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification (VER)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrated-project-management-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrated Project Management (IP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-trabajo-colaborativo-con-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Trabajo Colaborativo con GitHub
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Trabajo Colaborativo con GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-gestion-de-ramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Gestión de ramas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Pull Requests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-revisiones-y-aprobaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Revisiones y aprobaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-calidad-del-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Calidad del Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Calidad del Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-sonarcloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 SonarCloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-cobertura-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Cobertura de pruebas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-mejoras-implementadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Mejoras Implementadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Mejoras Implementadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-eliminado-logico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Eliminado lógico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Anexos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anexo-a-evidencias-de-jira" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo A — Evidencias de Jira
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-b-evidencias-de-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo B — Evidencias de GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-c-evidencias-de-sonarcloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo C — Evidencias de SonarCloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-d-evidencias-de-cobertura-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo D — Evidencias de Cobertura de Pruebas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-registro-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Registro de Versiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../informacion-general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Información General
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../caso-negocio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Caso de Negocio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objetivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../equipo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipo del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requerimientos Arquitecturales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historias-usuario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historias de Usuario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calidad-iso25010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluación ISO/IEC 25010
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ciclo-vida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ciclo de Vida
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-proyecto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestión del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trabajo Colaborativo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calidad-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calidad del Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mejoras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mejoras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anexos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registro de Versiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📑 Tabla de Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-informacion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Información General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-caso-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Caso de Negocio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Caso de Negocio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcionalidades-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionalidades principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelamiento-del-proceso-bpmn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelamiento del proceso (BPMN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Objetivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Objetivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-especificos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos específicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-equipo-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Equipo del Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Equipo del Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perfiles-del-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perfiles del equipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-requerimientos-arquitecturales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Requerimientos Arquitecturales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-historias-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Historias de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-evaluacion-de-calidad-isoiec-25010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Evaluación de Calidad (ISO/IEC 25010)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Evaluación de Calidad (ISO/IEC 25010)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-mantenibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Mantenibilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-confiabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Confiabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Seguridad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accion-correctiva-isoiec-12207" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acción correctiva (ISO/IEC 12207)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ciclo-de-vida-del-software-ntp-isoiec-12207" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Ciclo de Vida del Software (NTP-ISO/IEC 12207)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Ciclo de Vida del Software (NTP-ISO/IEC 12207)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proceso-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso principal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procesos-de-apoyo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procesos de apoyo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-organizacional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proceso organizacional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-del-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas del proceso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-gestion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Gestión del Proyecto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Gestión del Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-metodologia-scrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Metodología Scrum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-aplicacion-de-cmmi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Aplicación de CMMI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.2 Aplicación de CMMI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-solution-ts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Solution (TS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-ver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification (VER)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrated-project-management-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrated Project Management (IP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-trabajo-colaborativo-con-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Trabajo Colaborativo con GitHub
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Trabajo Colaborativo con GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-gestion-de-ramas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Gestión de ramas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Pull Requests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-revisiones-y-aprobaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Revisiones y aprobaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-calidad-del-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Calidad del Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Calidad del Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-sonarcloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 SonarCloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-cobertura-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Cobertura de pruebas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-mejoras-implementadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Mejoras Implementadas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Mejoras Implementadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-eliminado-logico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Eliminado lógico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Anexos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anexo-a-evidencias-de-jira" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo A — Evidencias de Jira
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-b-evidencias-de-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo B — Evidencias de GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-c-evidencias-de-sonarcloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo C — Evidencias de SonarCloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-d-evidencias-de-cobertura-de-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo D — Evidencias de Cobertura de Pruebas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-registro-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Registro de Versiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="project-charter-upeu-events">📋 Project Charter — UPeU Events<a class="headerlink" href="#project-charter-upeu-events" title="Permanent link">&para;</a></h1>
+<p><strong>Versión:</strong> 2.0 (mk2)
+<strong>Curso:</strong> Ingeniería de Software II — Ciclo VII, Grupo 1
+<strong>Universidad:</strong> Universidad Peruana Unión
+<strong>Profesor responsable:</strong> Ing. Ruben Roque Sucari
+<strong>Fecha:</strong> Marzo 2026</p>
+<hr />
+<h2 id="tabla-de-contenidos">📑 Tabla de Contenidos<a class="headerlink" href="#tabla-de-contenidos" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#1-información-general">1. Información General</a></li>
+<li><a href="#2-caso-de-negocio">2. Caso de Negocio</a></li>
+<li><a href="#3-objetivos">3. Objetivos</a></li>
+<li><a href="#4-equipo-del-proyecto">4. Equipo del Proyecto</a></li>
+<li><a href="#5-requerimientos-arquitecturales">5. Requerimientos Arquitecturales</a></li>
+<li><a href="#6-historias-de-usuario">6. Historias de Usuario</a></li>
+<li><a href="#7-evaluación-de-calidad-isoiec-25010">7. Evaluación de Calidad (ISO/IEC 25010)</a></li>
+<li><a href="#8-ciclo-de-vida-del-software-ntp-isoiec-12207">8. Ciclo de Vida del Software (NTP-ISO/IEC 12207)</a></li>
+<li><a href="#9-gestión-del-proyecto">9. Gestión del Proyecto</a></li>
+<li><a href="#10-trabajo-colaborativo-con-github">10. Trabajo Colaborativo con GitHub</a></li>
+<li><a href="#11-calidad-del-software">11. Calidad del Software</a></li>
+<li><a href="#12-mejoras-implementadas">12. Mejoras Implementadas</a></li>
+<li><a href="#13-conclusiones">13. Conclusiones</a></li>
+<li><a href="#14-anexos">14. Anexos</a></li>
+<li><a href="#15-registro-de-versiones">15. Registro de Versiones</a></li>
+</ul>
+<hr />
+<h2 id="1-informacion-general">1. Información General<a class="headerlink" href="#1-informacion-general" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Startup</strong></td>
+<td>Shaka</td>
+</tr>
+<tr>
+<td><strong>Producto</strong></td>
+<td>UPeU Events</td>
+</tr>
+<tr>
+<td><strong>Rubro</strong></td>
+<td>Desarrollo de software, transformación digital</td>
+</tr>
+<tr>
+<td><strong>Repositorio</strong></td>
+<td><a href="https://github.com/Jhemder/AppEventsUPeU.git">github.com/Jhemder/AppEventsUPeU</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Descripción del startup:</strong> Shaka es un equipo de estudiantes de Ingeniería de Sistemas que desarrolla soluciones de software como parte de su formación académica, aplicando análisis, diseño y desarrollo de sistemas para resolver problemas reales.</p>
+<p><strong>Descripción del producto:</strong> UPeU Events es un sistema de gestión de eventos orientado a mejorar el control de asistencia, el registro de calificaciones y la generación de reportes en eventos académicos. Permite registrar asistencia mediante códigos QR, gestionar evaluaciones de jurados y visualizar resultados en tiempo real, además de exportar reportes en PDF y Excel.</p>
+<hr />
+<h2 id="2-caso-de-negocio">2. Caso de Negocio<a class="headerlink" href="#2-caso-de-negocio" title="Permanent link">&para;</a></h2>
+<p>En el contexto académico, la gestión de eventos (concursos, exposiciones, jornadas científicas) suele realizarse de forma manual o con herramientas poco eficientes, lo que genera errores en el registro de asistencia, demoras en la evaluación de participantes y dificultad para obtener resultados confiables.</p>
+<p><strong>UPeU Events</strong> automatiza estos procesos clave:</p>
+<ul>
+<li>✅ Registro de asistencia mediante códigos QR</li>
+<li>✅ Gestión de calificaciones por jurados</li>
+<li>✅ Consulta de resultados en tiempo real</li>
+<li>✅ Generación automática de reportes</li>
+</ul>
+<h3 id="funcionalidades-principales">Funcionalidades principales<a class="headerlink" href="#funcionalidades-principales" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Inicio de sesión de usuarios</li>
+<li>Control de asistencia mediante QR</li>
+<li>Registro de calificaciones</li>
+<li>Consulta de resultados</li>
+<li>Ranking de participantes</li>
+<li>Exportación de reportes (PDF y Excel)</li>
+</ul>
+<h3 id="modelamiento-del-proceso-bpmn">Modelamiento del proceso (BPMN)<a class="headerlink" href="#modelamiento-del-proceso-bpmn" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>AS-IS:</strong> proceso actual, manual y propenso a errores.</li>
+<li><strong>TO-BE:</strong> el administrador gestiona eventos, registra estudiantes, define criterios de evaluación y asigna jurados desde una plataforma única. El sistema valida la asistencia vía QR en tiempo real, los jurados califican según criterios definidos, y el sistema consolida resultados, rankings y reportes automáticamente.</li>
+</ul>
+<blockquote>
+<p>📌 <em>Insertar diagramas BPMN AS-IS / TO-BE como imágenes en <code>/docs/img/</code>.</em></p>
+</blockquote>
+<hr />
+<h2 id="3-objetivos">3. Objetivos<a class="headerlink" href="#3-objetivos" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo-general">Objetivo general<a class="headerlink" href="#objetivo-general" title="Permanent link">&para;</a></h3>
+<p>Desarrollar un sistema de información que permita gestionar jornadas científicas mediante el registro automatizado de asistencia, la evaluación de ponentes, la generación de resultados en tiempo real y la elaboración de reportes digitales, optimizando la eficiencia y reduciendo errores en los procesos.</p>
+<h3 id="objetivos-especificos">Objetivos específicos<a class="headerlink" href="#objetivos-especificos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Automatizar el registro de asistencia mediante códigos QR.</li>
+<li>Implementar un módulo de evaluación para jurados.</li>
+<li>Registrar y gestionar estudiantes dentro del sistema.</li>
+<li>Generar resultados y rankings automáticamente.</li>
+<li>Permitir la visualización de reportes en tiempo real.</li>
+<li>Exportar reportes en formatos PDF y Excel.</li>
+<li>Garantizar la seguridad mediante autenticación de usuarios.</li>
+<li>Facilitar la gestión de eventos, jurados y grupos.</li>
+</ul>
+<hr />
+<h2 id="4-equipo-del-proyecto">4. Equipo del Proyecto<a class="headerlink" href="#4-equipo-del-proyecto" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Integrante</th>
+<th>Código</th>
+<th>Rol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Howard Lemuel Coila Alberto</td>
+<td>202312709</td>
+<td>Líder de proyecto</td>
+</tr>
+<tr>
+<td>Kevin Jherson Abarca Huayta</td>
+<td>202311896</td>
+<td>Desarrollador — QR, Firebase y asistencia</td>
+</tr>
+<tr>
+<td>Rossel Teofilo Turpo Maza</td>
+<td>202312744</td>
+<td>Reportes, certificados y rúbricas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="perfiles-del-equipo">Perfiles del equipo<a class="headerlink" href="#perfiles-del-equipo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Líder de proyecto</td>
+<td>Coordina el desarrollo y asegura el cumplimiento de objetivos.</td>
+</tr>
+<tr>
+<td>Desarrollador</td>
+<td>Desarrolla el sistema y programa las funcionalidades.</td>
+</tr>
+<tr>
+<td>Analista</td>
+<td>Analiza requerimientos y define funcionalidades.</td>
+</tr>
+<tr>
+<td>Diseñador UX/UI</td>
+<td>Diseña la interfaz para mejorar la experiencia del usuario.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-requerimientos-arquitecturales">5. Requerimientos Arquitecturales<a class="headerlink" href="#5-requerimientos-arquitecturales" title="Permanent link">&para;</a></h2>
+<p>El sistema se desarrolla bajo una <strong>arquitectura cliente-servidor</strong>, con acceso desde dispositivos móviles y web.</p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Escalabilidad</strong></td>
+<td>Soporte para múltiples eventos y usuarios concurrentes</td>
+</tr>
+<tr>
+<td><strong>Seguridad</strong></td>
+<td>Control de acceso mediante autenticación de usuarios</td>
+</tr>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td>Acceso en tiempo real a la información</td>
+</tr>
+<tr>
+<td><strong>Interoperabilidad</strong></td>
+<td>Exportación de datos en formatos PDF y Excel</td>
+</tr>
+<tr>
+<td><strong>Mantenibilidad</strong></td>
+<td>Código estructurado y modular</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-historias-de-usuario">6. Historias de Usuario<a class="headerlink" href="#6-historias-de-usuario" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Historia de Usuario</th>
+<th>Prioridad</th>
+<th>Criterios de Aceptación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU01</td>
+<td>Como administrador, quiero crear eventos para gestionar jornadas científicas.</td>
+<td>Alta</td>
+<td>Crear, editar y eliminar eventos</td>
+</tr>
+<tr>
+<td>HU02</td>
+<td>Como administrador, quiero registrar estudiantes para gestionar su participación.</td>
+<td>Alta</td>
+<td>Registro correcto y listado</td>
+</tr>
+<tr>
+<td>HU03</td>
+<td>Como asistente, quiero generar códigos QR para registrar asistencia.</td>
+<td>Alta</td>
+<td>Generación de QR por evento</td>
+</tr>
+<tr>
+<td>HU04</td>
+<td>Como estudiante, quiero escanear QR para registrar mi asistencia.</td>
+<td>Alta</td>
+<td>Registro automático y validado</td>
+</tr>
+<tr>
+<td>HU05</td>
+<td>Como sistema, quiero validar códigos QR para evitar duplicidad.</td>
+<td>Alta</td>
+<td>Validación única por usuario</td>
+</tr>
+<tr>
+<td>HU06</td>
+<td>Como jurado, quiero evaluar grupos asignados para calificar ponentes.</td>
+<td>Alta</td>
+<td>Registro de evaluación por criterios</td>
+</tr>
+<tr>
+<td>HU07</td>
+<td>Como sistema, quiero almacenar calificaciones para generar resultados.</td>
+<td>Alta</td>
+<td>Guardado correcto de datos</td>
+</tr>
+<tr>
+<td>HU08</td>
+<td>Como administrador, quiero visualizar reportes para analizar resultados.</td>
+<td>Media</td>
+<td>Reportes por evento</td>
+</tr>
+<tr>
+<td>HU09</td>
+<td>Como administrador, quiero publicar ganadores para mostrar resultados finales.</td>
+<td>Media</td>
+<td>Selección y visualización</td>
+</tr>
+<tr>
+<td>HU10</td>
+<td>Como usuario, quiero iniciar sesión para acceder de forma segura.</td>
+<td>Alta</td>
+<td>Validación de credenciales</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-evaluacion-de-calidad-isoiec-25010">7. Evaluación de Calidad (ISO/IEC 25010)<a class="headerlink" href="#7-evaluacion-de-calidad-isoiec-25010" title="Permanent link">&para;</a></h2>
+<p>La evaluación se realizó con <strong>SonarCloud</strong>, analizando el código fuente del repositorio según el modelo de calidad ISO/IEC 25010.</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Métrica</th>
+<th>Resultado</th>
+<th>Objetivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mantenibilidad</td>
+<td>Code Smells</td>
+<td>12</td>
+<td>≤ 5</td>
+</tr>
+<tr>
+<td>Confiabilidad</td>
+<td>Bugs</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Seguridad</td>
+<td>Vulnerabilidades</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Seguridad</td>
+<td>Severidad</td>
+<td>Blocker</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="71-mantenibilidad">7.1 Mantenibilidad<a class="headerlink" href="#71-mantenibilidad" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Code Smells:</strong> 12</li>
+<li><strong>Maintainability Rating:</strong> A</li>
+</ul>
+<p>El sistema presenta una estructura de código adecuada, con oportunidades de mejora en buenas prácticas de desarrollo.</p>
+<h3 id="72-confiabilidad">7.2 Confiabilidad<a class="headerlink" href="#72-confiabilidad" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Bugs detectados:</strong> 0</li>
+<li><strong>Reliability Rating:</strong> A</li>
+</ul>
+<p>No se presentan errores funcionales, lo que garantiza un comportamiento estable.</p>
+<h3 id="73-seguridad">7.3 Seguridad<a class="headerlink" href="#73-seguridad" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Vulnerabilidades:</strong> 1</li>
+<li><strong>Severidad:</strong> Blocker</li>
+</ul>
+<p>Se identificó exposición de credenciales en el código fuente, representando un riesgo crítico.</p>
+<h4 id="accion-correctiva-isoiec-12207">Acción correctiva (ISO/IEC 12207)<a class="headerlink" href="#accion-correctiva-isoiec-12207" title="Permanent link">&para;</a></h4>
+<p><strong>Antes:</strong></p>
+<pre><code class="language-properties">spring.datasource.username=postgres
+spring.datasource.password=password
+</code></pre>
+<p><strong>Después (uso de variables de entorno):</strong></p>
+<pre><code class="language-properties">spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+</code></pre>
+<hr />
+<h2 id="8-ciclo-de-vida-del-software-ntp-isoiec-12207">8. Ciclo de Vida del Software (NTP-ISO/IEC 12207)<a class="headerlink" href="#8-ciclo-de-vida-del-software-ntp-isoiec-12207" title="Permanent link">&para;</a></h2>
+<h3 id="proceso-principal">Proceso principal<a class="headerlink" href="#proceso-principal" title="Permanent link">&para;</a></h3>
+<p>Se aplica el <strong>proceso de desarrollo de software</strong>: análisis de requisitos, diseño, implementación, pruebas e integración, orientado a una <strong>aplicación móvil para la UPeU</strong> destinada a la gestión de Jornadas Científicas (inscripción, difusión de cronograma y control de asistencia).</p>
+<h3 id="procesos-de-apoyo">Procesos de apoyo<a class="headerlink" href="#procesos-de-apoyo" title="Permanent link">&para;</a></h3>
+<p><strong>Verificación</strong> — pruebas unitarias y funcionales sobre:
+- Registro e inicio de sesión de usuarios
+- Inscripción a jornadas científicas
+- Visualización de cronogramas y ponencias
+- Generación y lectura de códigos QR para asistencia
+- Notificaciones y recordatorios del evento</p>
+<p><strong>Validación</strong> — pruebas con usuarios reales (estudiantes, docentes, organizadores) para confirmar usabilidad, rapidez y confiabilidad.</p>
+<p><strong>Documentación:</strong>
+- Manual de usuario (participantes y organizadores)
+- Manual técnico del sistema
+- Evidencias de pruebas realizadas
+- Guía de uso del módulo de asistencia por QR</p>
+<h3 id="proceso-organizacional">Proceso organizacional<a class="headerlink" href="#proceso-organizacional" title="Permanent link">&para;</a></h3>
+<p>Se aplica <strong>mejora continua</strong>: identificación de fallos, retroalimentación de usuarios y análisis de resultados para mejorar rendimiento, usabilidad y seguridad en futuros eventos.</p>
+<h3 id="metricas-del-proceso">Métricas del proceso<a class="headerlink" href="#metricas-del-proceso" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Número de defectos encontrados durante pruebas y uso real</li>
+<li>Tiempo promedio de inscripción de un participante en la app</li>
+<li>Tiempo promedio de registro de asistencia mediante QR</li>
+<li>Disponibilidad del sistema durante el evento</li>
+<li>Nivel de satisfacción del usuario (encuestas post-evento)</li>
+<li>Tiempo de registro de eventos</li>
+<li>Precisión en cálculos de resultados</li>
+</ul>
+<hr />
+<h2 id="9-gestion-del-proyecto">9. Gestión del Proyecto<a class="headerlink" href="#9-gestion-del-proyecto" title="Permanent link">&para;</a></h2>
+<h3 id="91-metodologia-scrum">9.1 Metodología Scrum<a class="headerlink" href="#91-metodologia-scrum" title="Permanent link">&para;</a></h3>
+<p>El desarrollo se organizó en <strong>Sprints</strong> incrementales, facilitando la distribución de tareas, el seguimiento del avance y la colaboración del equipo.</p>
+<table>
+<thead>
+<tr>
+<th>Sprint</th>
+<th>Enfoque</th>
+<th>Entregables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sprint 1</td>
+<td>Autenticación y Usuarios</td>
+<td>Inicio de sesión, gestión de usuarios, control de acceso por roles</td>
+</tr>
+<tr>
+<td>Sprint 2</td>
+<td>Gestión de Eventos</td>
+<td>Creación/edición de eventos, registro de participantes</td>
+</tr>
+<tr>
+<td>Sprint 3</td>
+<td>Control de Asistencia QR</td>
+<td>Generación de QR, registro y validación de asistencia</td>
+</tr>
+<tr>
+<td>Sprint 4</td>
+<td>Evaluación y Reportes</td>
+<td>Rúbricas de evaluación, certificados, reportes PDF/Excel</td>
+</tr>
+</tbody>
+</table>
+<p>El <strong>Product Backlog</strong> contiene las historias de usuario que representan las funcionalidades requeridas por los distintos actores, priorizadas para cada Sprint.</p>
+<h3 id="92-aplicacion-de-cmmi">9.2 Aplicación de CMMI<a class="headerlink" href="#92-aplicacion-de-cmmi" title="Permanent link">&para;</a></h3>
+<h4 id="technical-solution-ts">Technical Solution (TS)<a class="headerlink" href="#technical-solution-ts" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Stack principal:</strong> Flutter y Dart (Android, iOS, Web)</li>
+<li><strong>Backend as a Service:</strong> Firebase</li>
+<li>Firebase Authentication</li>
+<li>Cloud Firestore</li>
+<li>Firebase Storage</li>
+<li>Firebase Hosting (si aplica)</li>
+<li><strong>Roles de la arquitectura:</strong> Administrador, Administrador de Carrera, Jurados, Asistentes, Usuarios</li>
+</ul>
+<p><strong>Evidencias TS:</strong> historias de usuario, diseño de pantallas, implementación de funcionalidades, subtareas técnicas en Jira.</p>
+<h4 id="verification-ver">Verification (VER)<a class="headerlink" href="#verification-ver" title="Permanent link">&para;</a></h4>
+<p><strong>Casos de prueba ejecutados:</strong>
+- Test Login
+- Test Registro de Eventos
+- Test Inscripción de Participantes
+- Test QR
+- Test Evaluación
+- Test Certificados
+- Test Reportes</p>
+<p><strong>Resultados:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Funcionalidad</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login</td>
+<td>✅ Correcto</td>
+</tr>
+<tr>
+<td>Registro de Eventos</td>
+<td>✅ Correcto</td>
+</tr>
+<tr>
+<td>Inscripciones</td>
+<td>✅ Correcto</td>
+</tr>
+<tr>
+<td>QR</td>
+<td>✅ Correcto</td>
+</tr>
+<tr>
+<td>Evaluaciones</td>
+<td>✅ Correcto</td>
+</tr>
+<tr>
+<td>Certificados</td>
+<td>✅ Correcto</td>
+</tr>
+<tr>
+<td>Reportes</td>
+<td>✅ Correcto</td>
+</tr>
+</tbody>
+</table>
+<h4 id="integrated-project-management-ip">Integrated Project Management (IP)<a class="headerlink" href="#integrated-project-management-ip" title="Permanent link">&para;</a></h4>
+<p>Gestión integrada mediante <strong>Jira</strong> y <strong>GitHub</strong> para asignación de tareas, control de versiones y seguimiento del avance.</p>
+<table>
+<thead>
+<tr>
+<th>Integrante</th>
+<th>Responsabilidades</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kevin Jherson</td>
+<td>QR, Firebase y asistencia</td>
+</tr>
+<tr>
+<td>Howard Lemuel</td>
+<td>Gestión de eventos</td>
+</tr>
+<tr>
+<td>Rossel Teofilo</td>
+<td>Reportes, certificados y rúbricas</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📌 <em>Insertar capturas del tablero Scrum y de tareas asignadas en <code>/docs/img/</code>.</em></p>
+</blockquote>
+<hr />
+<h2 id="10-trabajo-colaborativo-con-github">10. Trabajo Colaborativo con GitHub<a class="headerlink" href="#10-trabajo-colaborativo-con-github" title="Permanent link">&para;</a></h2>
+<h3 id="101-gestion-de-ramas">10.1 Gestión de ramas<a class="headerlink" href="#101-gestion-de-ramas" title="Permanent link">&para;</a></h3>
+<p>Se implementó una estrategia basada en ramas para la incorporación controlada de cambios al proyecto principal.</p>
+<h3 id="102-pull-requests">10.2 Pull Requests<a class="headerlink" href="#102-pull-requests" title="Permanent link">&para;</a></h3>
+<p>Se realizaron Pull Requests para integrar nuevas funcionalidades al repositorio principal.</p>
+<h3 id="103-revisiones-y-aprobaciones">10.3 Revisiones y aprobaciones<a class="headerlink" href="#103-revisiones-y-aprobaciones" title="Permanent link">&para;</a></h3>
+<p>Se realizaron revisiones de código entre los integrantes antes de fusionar cambios a la rama principal.</p>
+<p><strong>Repositorio:</strong> <a href="https://github.com/Jhemder/AppEventsUPeU.git">github.com/Jhemder/AppEventsUPeU</a></p>
+<hr />
+<h2 id="11-calidad-del-software">11. Calidad del Software<a class="headerlink" href="#11-calidad-del-software" title="Permanent link">&para;</a></h2>
+<h3 id="111-sonarcloud">11.1 SonarCloud<a class="headerlink" href="#111-sonarcloud" title="Permanent link">&para;</a></h3>
+<p>Se utilizó SonarCloud para el análisis estático del código fuente, identificando problemas de calidad, mantenibilidad y cobertura de pruebas.</p>
+<p><strong>Métricas evaluadas:</strong>
+- Coverage
+- Bugs
+- Vulnerabilities
+- Code Smells
+- Security Hotspots</p>
+<h3 id="112-cobertura-de-pruebas">11.2 Cobertura de pruebas<a class="headerlink" href="#112-cobertura-de-pruebas" title="Permanent link">&para;</a></h3>
+<p>Evaluada con <strong>Flutter Test</strong> y <strong>LCOV</strong>.</p>
+<pre><code class="language-bash">flutter test --coverage
+</code></pre>
+<hr />
+<h2 id="12-mejoras-implementadas">12. Mejoras Implementadas<a class="headerlink" href="#12-mejoras-implementadas" title="Permanent link">&para;</a></h2>
+<h3 id="121-eliminado-logico">12.1 Eliminado lógico<a class="headerlink" href="#121-eliminado-logico" title="Permanent link">&para;</a></h3>
+<p>Se implementó el mecanismo de eliminado lógico (<em>soft delete</em>) para preservar la integridad histórica de la información almacenada en Firestore, mediante un atributo de control que indica si un registro está activo o eliminado.</p>
+<p><strong>Aplicado en:</strong>
+- Eventos
+- Participantes
+- Usuarios
+- Evaluaciones</p>
+<hr />
+<h2 id="13-conclusiones">13. Conclusiones<a class="headerlink" href="#13-conclusiones" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Se aplicó <strong>Scrum</strong> para la gestión del proyecto.</li>
+<li>Se implementaron prácticas <strong>CMMI</strong> en las áreas TS, VER e IP.</li>
+<li>Se utilizó <strong>GitHub</strong> para trabajo colaborativo.</li>
+<li>Se aplicaron herramientas de calidad como <strong>SonarCloud</strong> y <strong>Snyk</strong>.</li>
+<li>El sistema <strong>UPeU Events</strong> cumple los requisitos funcionales establecidos para la gestión de eventos académicos.</li>
+</ul>
+<hr />
+<h2 id="14-anexos">14. Anexos<a class="headerlink" href="#14-anexos" title="Permanent link">&para;</a></h2>
+<h3 id="anexo-a-evidencias-de-jira">Anexo A — Evidencias de Jira<a class="headerlink" href="#anexo-a-evidencias-de-jira" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Product Backlog del proyecto</li>
+<li>Historias de usuario registradas</li>
+<li>Sprint Backlog de cada iteración</li>
+<li>Asignación de tareas y subtareas</li>
+<li>Seguimiento del avance de los Sprints</li>
+<li>Tablero Scrum utilizado durante el desarrollo</li>
+<li>Evidencias de cierre de tareas y cumplimiento de objetivos</li>
+</ul>
+<h3 id="anexo-b-evidencias-de-github">Anexo B — Evidencias de GitHub<a class="headerlink" href="#anexo-b-evidencias-de-github" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Repositorio principal del proyecto</li>
+<li>Gestión de ramas de desarrollo</li>
+<li>Pull Requests generados por los integrantes</li>
+<li>Revisiones de código realizadas</li>
+<li>Aprobaciones de Pull Requests</li>
+<li>Historial de commits del proyecto</li>
+</ul>
+<p>🔗 <a href="https://github.com/Jhemder/AppEventsUPeU.git">github.com/Jhemder/AppEventsUPeU</a></p>
+<h3 id="anexo-c-evidencias-de-sonarcloud">Anexo C — Evidencias de SonarCloud<a class="headerlink" href="#anexo-c-evidencias-de-sonarcloud" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dashboard general del proyecto</li>
+<li>Métricas de calidad</li>
+<li>Reportes de mantenibilidad</li>
+<li>Reportes de seguridad</li>
+<li>Vulnerabilidades detectadas</li>
+<li>Acciones correctivas implementadas</li>
+</ul>
+<h3 id="anexo-d-evidencias-de-cobertura-de-pruebas">Anexo D — Evidencias de Cobertura de Pruebas<a class="headerlink" href="#anexo-d-evidencias-de-cobertura-de-pruebas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ejecución de pruebas unitarias</li>
+<li>Resultado del comando <code>flutter test</code></li>
+<li>Generación de cobertura mediante LCOV</li>
+<li>Reporte visual de cobertura</li>
+<li>Archivos analizados para cobertura</li>
+</ul>
+<pre><code class="language-bash">flutter test --coverage
+</code></pre>
+<hr />
+<h2 id="15-registro-de-versiones">15. Registro de Versiones<a class="headerlink" href="#15-registro-de-versiones" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Versión</th>
+<th>Descripción</th>
+<th>Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02/04/2026</td>
+<td>1.0</td>
+<td>Elaboración inicial: definición del sistema UPeU Events, alcance y actores.</td>
+<td>Howard</td>
+</tr>
+<tr>
+<td>09/04/2026</td>
+<td>2.0</td>
+<td>Diseño del sistema, funcionalidades y requerimientos del sistema de eventos.</td>
+<td>Rossel</td>
+</tr>
+<tr>
+<td>16/04/2026</td>
+<td>3.0</td>
+<td>Ajustes finales, mejoras en reportes y módulo de calificaciones.</td>
+<td>Jherson</td>
+</tr>
+<tr>
+<td>30/06/2026</td>
+<td><strong>4.0 (mk2)</strong></td>
+<td>Migración a formato Markdown para GitHub; reestructuración como Project Charter; consolidación de evidencias y métricas de calidad.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Documento generado a partir del informe final del curso Ingeniería de Software II — Universidad Peruana Unión, Grupo 1 (Shaka / UPeU Events).</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.instant", "navigation.expand", "toc.follow", "content.code.copy", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
