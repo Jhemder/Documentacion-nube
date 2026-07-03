@@ -27,8 +27,9 @@ Utiliza el menú superior para acceder a cada documento.
 
 ## 👨‍💻 Integrantes
 
-- Jhem
-- (Agrega aquí a tus compañeros)
+- Howard Lemuel Coila Alberto - 202312709
+- kevin Jherson Abarca Huayta - 202311896
+- Rossel Teofilo Turpo Maza - 202312744
 
 ---
 
