@@ -1,0 +1,45 @@
+site_name: UPeU Events Documentation
+site_description: Documentación del proyecto UPeU Events
+site_author: Kevin Jherson Abarca
+
+theme:
+  name: material
+  language: es
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.expand
+    - toc.follow
+    - content.code.copy
+    - search.highlight
+
+
+nav:
+  - Inicio: index.md
+  - Project Charter: PROJECT_CHARTER.md
+  - Inicio: index.md
+  - Información General: informacion-general.md
+  - Caso de Negocio: caso-negocio.md
+  - Objetivos: objetivos.md
+  - Equipo del Proyecto: equipo.md
+  - Requerimientos Arquitecturales: arquitectura.md
+  - Historias de Usuario: historias-usuario.md
+  - Evaluación ISO/IEC 25010: calidad-iso25010.md
+  - Ciclo de Vida: ciclo-vida.md
+  - Gestión del Proyecto: gestion-proyecto.md
+  - Trabajo Colaborativo: github.md
+  - Calidad del Software: calidad-software.md
+  - Mejoras: mejoras.md
+  - Conclusiones: conclusiones.md
+  - Anexos: anexos.md
+  - Registro de Versiones: versiones.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
